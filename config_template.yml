@@ -1,0 +1,14 @@
+accessCode: "0000"
+
+cloudnetApiKey: 
+
+wikiApiToken: 
+wikiURL: https://atmos.meteo.uni-koeln.de/ag_crewell/lib/exe/jsonrpc.php
+
+team:
+    - Max Mustermann
+
+instruments:
+    - name: Lufft CHM15k
+      cloudnetUUID: 
+      wikiPage: internal:instruments:ceilometer:ceilo_jenoptk_log
