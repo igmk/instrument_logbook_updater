@@ -1,13 +1,13 @@
-FROM python:3.8-slim
+FROM python:3.12.7-slim-bookworm
 
-
-COPY requirements.txt .
-RUN python -m pip install -r requirements.txt
-
-
-COPY ./app /app
 WORKDIR /app
 
-EXPOSE 8000
+COPY requirements.txt .
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "-k", "uvicorn.workers.UvicornWorker", "main:app"]
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+EXPOSE 5000
+
+CMD ["gunicorn", "main:app", "-b", "0.0.0.0:5000"]

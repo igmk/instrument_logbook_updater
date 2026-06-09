@@ -92,3 +92,8 @@ def index():
             print("wrong code")
 
     return render_template('index.html', team=config["team"], instruments=[entry["name"] for entry in config["instruments"]])
+
+
+
+if __name__ == "__main__":
+  app.run()
