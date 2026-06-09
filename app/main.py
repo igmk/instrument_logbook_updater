@@ -1,7 +1,5 @@
 from flask import Flask, render_template, request, url_for, flash, redirect
 import yaml
-from xmlrpc import client
-import urllib.parse
 import requests
 import datetime
 
