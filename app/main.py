@@ -5,7 +5,7 @@ import datetime
 
 app = Flask(__name__)
 
-with open('config.yml', 'r') as f:
+with open('/config/config.yml', 'r') as f:
     config = yaml.load(f, Loader=yaml.SafeLoader)
 
 def addWikiEntry(wikiURL, wikiApiToken,wikiPage,eventType,dt,notes,operator):
